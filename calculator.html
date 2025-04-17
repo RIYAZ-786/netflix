@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="calculator">
+        <h1>calculator</h1>
+        <input type="text" name="" id="result"><br>
+        <button onclick="fun(7)">7</button>
+        <button onclick="fun(8)">8</button>
+        <button onclick="fun(9)">9</button>
+        <button onclick="fun('+')">+</button><br>
+        
+        <button onclick="fun(4)">4</button>
+        <button onclick="fun(5)">5</button>
+        <button onclick="fun(6)">6</button>
+        <button onclick="fun('-')">-</button><br>
+        <button onclick="fun(3)">3</button>
+        <button onclick="fun(2)">2</button>
+        <button onclick="fun(1)">1</button>
+        <button onclick="fun('*')">*</button> <br>
+
+
+        <button onclick="fun(0)">0</button>
+        <button onclick="fun(.)">.</button>
+        <button onclick="fun('%')">%</button>
+        <button onclick="fun('/')">/</button> <br>
+        
+        <button id="equal" onclick="showresult('=')">=</button>
+        <button id="clear" onclick="clrit()">clear</button>
+
+
+
+
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function fun(x)
+    {
+        document.getElementById("result").value+=x;
+    }
+    function showresult(){
+        e= document.getElementById("result").value
+        r=eval(e);
+        document.getElementById("result").value=r;
+    }
+    function clrit(){
+        
+        document.getElementById("result").value="";
+    }
+
+    </script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-transform: capitalize;
+            background-color: rgb(22, 139, 168);
+        }
+        h1{
+            color: brown;
+        }
+    .calculator{
+    
+        text-align: center;
+        font-size: 15px;
+        margin-top: 50px;
+        color: black;
+    
+    }
+    .calculator>button{
+        
+        font-size: 40px;
+        width: 50px;
+        height: 50px;
+        margin: 2px;
+        background-color: black;
+        color: tomato;
+    }
+    .calculator>button:hover{
+        transform: scale(1.1);
+    }
+    #equal{
+        width: 0px;
+        height: 50px;
+    
+    }
+    #result{
+        background-color: white;
+        height: 70px;
+        width: 220px;
+        font-size: 30px;
+        color: tomato;
+    }
+    #equal{
+        width: 108px;
+    }
+    #clear{
+        width: 108px;
+    }
+    
+    
+    
+    </style>
